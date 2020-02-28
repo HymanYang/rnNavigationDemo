@@ -3,6 +3,10 @@ import {View, Text} from 'react-native';
 
 export default class HomePage extends React.Component {
 
+        // static navigationOptions = {
+        //     header: null,
+        // }
+
     render() {
         return (
             <View style={{flex: 1, flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>

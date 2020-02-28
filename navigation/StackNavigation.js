@@ -2,12 +2,10 @@ import React from 'react';
 import {View, Text} from 'react-native';
 import {createAppContainer} from 'react-navigation';
 import {createStackNavigator} from 'react-navigation-stack';
-import OnePage from './OnePage';
 import HomePage from './HomePage';
 import LoginPage from './LoginPage';
-import TowPage from './TowPage';
-import ThreePage from './ThreePage';
-import FourPage from './FourPage';
+
+import BottomNavigation from "./BottomNavigation";
 
 
 const AppStackNav = createStackNavigator({
@@ -17,19 +15,13 @@ const AppStackNav = createStackNavigator({
     Login: {
         screen: LoginPage,
     },
-    // OnePage: {
-    //     screen: OnePage,
-    // }, TowPage: {
-    //     screen: TowPage,
-    // },
-    // ThreePage: {
-    //     screen: ThreePage,
-    // }, FourPage: {
-    //     screen: FourPage,
-    // },
+    Main: {
+        screen: BottomNavigation
+    }
 }, {
     initialRouteName: 'Home',
     headerMode: 'screen',
 });
+
 
 export default createAppContainer(AppStackNav);

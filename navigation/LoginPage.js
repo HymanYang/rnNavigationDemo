@@ -34,7 +34,7 @@ export default class LoginPage extends React.Component {
             <View style={{flex: 1, flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
 
                 <TouchableOpacity onPress={() => {
-
+                        this.props.navigation.navigate('Main');
                 }}>
                     <View style={{alignItems: 'center'}}>
                         <Text style={{color: 'red', fontSize: 34}}>模拟登陆页面</Text>

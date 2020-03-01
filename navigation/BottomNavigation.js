@@ -2,7 +2,7 @@ import React from 'react';
 import {View, Text, Image} from 'react-native';
 import {createAppContainer} from 'react-navigation';
 import {createMaterialBottomTabNavigator} from 'react-navigation-material-bottom-tabs';
-import { createBottomTabNavigator } from 'react-navigation-tabs';
+import {createBottomTabNavigator} from 'react-navigation-tabs';
 
 import Icon from 'react-native-vector-icons/Ionicons';
 //import LogoNodejs from 'react-ionicons/lib/LogoNodejs'
@@ -29,11 +29,11 @@ const BottomTabNavigation = createBottomTabNavigator({
                 alignSelf: 'center',
             },
             tabBarLabel: '主页',
-            tabBarIcon: ({focused,tintColor}) => {
+            tabBarIcon: ({focused, tintColor}) => {
                 let img = focused ? '.././images/tab_main_check_vip.png' : '.././images/tab_main_nocheck_vip.png';
-               return (<Image
-                   source={require('.././images/tab_main_nocheck_vip.png')}
-                   style={[{height: 24, width: 24}, {tintColor: tintColor}]}/>);
+                return (<Image
+                    source={require('.././images/tab_main_nocheck_vip.png')}
+                    style={[{height: 24, width: 24}, {tintColor: tintColor}]}/>);
             },
         }
     },
@@ -77,7 +77,7 @@ const BottomTabNavigation = createBottomTabNavigator({
     //是否允许在标签之间进行滑动
     // swipeEnabled: true,
     //tab间的类fragment配置
-    backBehavior:'none',
+    backBehavior: 'none',
     tabBarOptions: {
         //共有属性
         showIcon: true,//是否显示图标，默认开启
@@ -100,9 +100,11 @@ const BottomTabNavigation = createBottomTabNavigator({
     },
 });
 
+// export default BottomTabNavigation;
+
 const AppContainer = createAppContainer(BottomTabNavigation);
 
-//export default AppContainer;
+// export default AppContainer;
 
 export default class extends React.Component {
 
@@ -111,7 +113,7 @@ export default class extends React.Component {
     }
 
     render() {
-        return <AppContainer/>;
+        return <AppContainer />;
     }
 
 }

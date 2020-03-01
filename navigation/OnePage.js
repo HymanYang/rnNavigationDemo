@@ -2,7 +2,7 @@ import React from 'react';
 import {View, Text, Dimensions, TouchableOpacity} from 'react-native';
 
 
-let deviceWidth = Dimensions.get('window').width
+let deviceWidth = Dimensions.get('window').width;
 
 
 export default class HomePage extends React.Component {
@@ -31,7 +31,7 @@ export default class HomePage extends React.Component {
                 {this._titleBar()}
 
                 <TouchableOpacity onPress={() => {
-
+                    this.props.navigation.navigate('Test');
                 }}>
                     <View>
                         <Text

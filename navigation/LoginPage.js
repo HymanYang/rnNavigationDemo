@@ -44,6 +44,15 @@ export default class LoginPage extends React.Component {
 
 
                 <TouchableOpacity onPress={() => {
+                    this.props.navigation.navigate('TowTab');
+                }}>
+                    <View style={{alignItems: 'center'}}>
+                        <Text style={{color: 'red', fontSize: 34}}>二级tab入口</Text>
+                    </View>
+                </TouchableOpacity>
+
+
+                <TouchableOpacity onPress={() => {
                     this.props.navigation.goBack();
                     //this._closeBackView();
                 }}>

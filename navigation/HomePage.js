@@ -25,7 +25,7 @@ export default class HomePage extends React.Component {
 
         //自定切换到下一个页面
         setTimeout(() => {
-            this._closeBackView();
+            //this._closeBackView();
         }, 2000);
 
     }
@@ -35,9 +35,9 @@ export default class HomePage extends React.Component {
             <View style={{flex: 1, flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
 
                 <TouchableOpacity onPress={() => {
-                    //this.props.navigation.navigate('Login');
+                    this.props.navigation.navigate('Login');
 
-                    this._closeBackView();
+                    //this._closeBackView();
 
                 }}>
                     <Text style={{color: 'red', fontSize: 34}}>模拟欢迎页面</Text>

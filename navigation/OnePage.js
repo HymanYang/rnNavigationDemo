@@ -31,7 +31,7 @@ export default class HomePage extends React.Component {
                 {this._titleBar()}
 
                 <TouchableOpacity onPress={() => {
-                    this.props.navigation.navigate('Test');
+                    this.props.navigation.navigate('TowTab');
                 }}>
                     <View>
                         <Text

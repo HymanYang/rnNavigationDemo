@@ -11,6 +11,6 @@ import StackNavigation from './navigation/StackNavigation';
 // import MaterialTopTabNavigator from "./navigation/MaterialTopTabNavigator";
 // import SwitchFbDemo from "./navigation/SwitchFbDemo";
 
-import AnimatedDemo from './navigation/AnimatedDemo2';
+import AnimatedDemo from './navigation/AnimatedDemo3';
 
 AppRegistry.registerComponent(appName, () => AnimatedDemo);

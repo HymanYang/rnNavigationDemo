@@ -15,6 +15,8 @@ import {
 var screenW = Dimensions.get('window').width;
 var screenH = Dimensions.get('window').height;
 
+
+
 export default class Opacity extends Component {
     constructor(props) {
         super(props);

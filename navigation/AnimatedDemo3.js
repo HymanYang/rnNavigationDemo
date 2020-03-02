@@ -10,11 +10,14 @@ import {
     Animated,
     NativeModules,
     Easing,
+    LayoutAnimation,
+    UIManager,
 } from 'react-native';
 
 var screenW = Dimensions.get('window').width;
 var screenH = Dimensions.get('window').height;
 
+const uiM = UIManager.setLayoutAnimationEnabledExperimental && UIManager.setLayoutAnimationEnabledExperimental(true);
 
 export default class AniDemo3 extends React.Component {
 
@@ -22,6 +25,7 @@ export default class AniDemo3 extends React.Component {
         super(props);
 
         this.state = {
+            showNewOne: false,
             w: 200,
             h: 20,
         };
@@ -30,7 +34,7 @@ export default class AniDemo3 extends React.Component {
 
     _onPress() {
         LayoutAnimation.configureNext({
-            duration: 700,   //持续时间
+            duration: 1200,   //持续时间
             create: {
                 type: 'linear',
                 property: 'opacity',
@@ -40,17 +44,25 @@ export default class AniDemo3 extends React.Component {
                 springDamping: 0.4,
             },
         });
-        this.setState({w: this.state.w + 30, h: this.state.h + 30});
+        this.setState({w: this.state.w + 30, h: this.state.h + 30, showNewOne : true});
     };
 
 
     render() {
+
+        var newOne = this.state.showNewOne ? (
+            <View style={[styles.content, {width: this.state.w, height: this.state.h}]}>
+                <Text style={[{textAlign: 'center'}]}>new one</Text>
+            </View>
+        ) : null;
+
         return (
             <View style={styles.container}>
                 <View style={[styles.content, {width: this.state.w, height: this.state.h}]}>
                     <Text style={[{textAlign: 'center'}]}>Hi, here is VaJoy</Text>
                 </View>
-                <TouchableOpacity onPress={this._onPress}>
+                {newOne}
+                <TouchableOpacity onPress={this._onPress.bind(this)}>
                     <View style={styles.button}>
                         <Text style={styles.buttonText}>Press me!</Text>
                     </View>
@@ -77,16 +89,18 @@ const styles = StyleSheet.create({
             backgroundColor: 'yellow',
             marginTop: 5,
             padding: 20,
+            justifyContent: 'center',
         },
 
         button: {
-            padding: 5,
-            marginTop: 3,
+            padding: 15,
+            marginTop: 13,
         },
         buttonText: {
             backgroundColor: 'black',
             color: 'white',
             fontSize: 20,
+            margin: 10,
         },
     })
 ;

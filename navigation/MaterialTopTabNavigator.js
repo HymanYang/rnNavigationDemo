@@ -3,10 +3,10 @@ import {View, Text, Image, StyleSheet, Dimensions, TouchableOpacity} from 'react
 import {createAppContainer} from 'react-navigation';
 import {createMaterialTopTabNavigator} from 'react-navigation-tabs';
 
-let deviceWidth = Dimensions.get('window').width
+let deviceWidth = Dimensions.get('window').width;
 
 
-class TopPage01 extends React.Component {
+export class TopPage01 extends React.Component {
     render() {
         return (
             <View style={styles.container}>
@@ -23,7 +23,7 @@ class TopPage01 extends React.Component {
     }
 }
 
-class TopPage02 extends React.Component {
+export class TopPage02 extends React.Component {
     render() {
         return (
             <View style={styles.container}>
@@ -35,7 +35,7 @@ class TopPage02 extends React.Component {
     }
 }
 
-class TopPage03 extends React.Component {
+export class TopPage03 extends React.Component {
     render() {
         return (
             <View style={styles.container}>
@@ -123,22 +123,20 @@ const TopTabNavigator = createMaterialTopTabNavigator({
     }
 });
 
-const TopTabNavigation = createAppContainer(TopTabNavigator);
+// const TopTabNavigation = createAppContainer(TopTabNavigator);
 //export default appTopTabNavigation;
-
-
-export default class extends React.Component {
-
-    static navigationOptions = {
-        header: null,
-    }
-
-    render() {
-        return <TopTabNavigation/>;
-    }
-
-}
-
+// export default class extends React.Component {
+//
+//     static navigationOptions = {
+//         header: null,
+//     }
+//
+//     render() {
+//         return <TopTabNavigation/>;
+//     }
+//
+// }
+//
 
 const styles = StyleSheet.create({
     container: {

@@ -12,5 +12,8 @@ import StackNavigation from './navigation/StackNavigation';
 // import SwitchFbDemo from "./navigation/SwitchFbDemo";
 
 import AnimatedDemo from './navigation/AnimatedDemo3';
+import AsyncStorage from './navigation/AsyncStorage';
+import IndexR from './redux/index-r';
 
-AppRegistry.registerComponent(appName, () => AnimatedDemo);
+
+AppRegistry.registerComponent(appName, () => IndexR);
